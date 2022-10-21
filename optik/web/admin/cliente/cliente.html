@@ -1,0 +1,150 @@
+<div class="row">
+    <div class="col">
+        <div class="card-header modulo-title text-light bg-gradient" >
+            <span>
+                <img alt="" style="height: 24px;" src="../img/svg/package.svg"/>
+                <span class="h5">M&oacute;dulo de Gesti&oacute;n de Clientes</span>
+                <span style="margin-left: 16px;">
+                    <button class="btn btn-sm btn-outline-light my-2" 
+                            onclick="cm.setDetalleVisible(true);">
+                        <i class="fas fa-plus"></i>&nbsp;&nbsp;Agregar Nuevo
+                    </button>
+                </span>
+            </span>
+            <span class="float-end"><a class="text-light" href="#" onclick="cerrarModulo();">
+                    <i class="fas fa-times"></i>
+                </a>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="row mt-2">
+    <div id="divDetalle" class="col-12">
+        <div class="card">
+            <div class="card-header card-hform">
+                Detalles del Cliente
+                <span class="float-end">
+                    <a href="#" 
+                       onclick="cm.setDetalleVisible(false);">
+                        <i class="fas fa-times"></i>
+                    </a>
+                </span>
+            </div>
+            <div class="card-body">
+                <div class="form">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 mb-1 mb-md-0">                            
+                                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #34383c; border-radius: 5px;">
+                                                <input id="txtNumeroUnicoCliente" type="text" class="form-control" readonly/>
+                                                <label for="txtNumeroUnicoCliente">N&uacute;mero &Uacute;nico:</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 mb-1 mb-md-0">                            
+                                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #34383c; border-radius: 5px;">
+                                                <input id="txtIdCliente" type="text" class="form-control" readonly/>
+                                                <label for="txtIdCliente"> </label>
+                                            </div>
+                                        </div>                                        
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>                       
+                    </div>
+                    <div class="row" style="padding-top: 8px; padding-bottom: 16px;">
+                        <div class="col-12 col-md-3 mb-1 mb-md-0">                            
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #04272E; border-radius: 5px;">
+                                <input id="txtNombreC" type="text" class="form-control" placeholder="Nombre del Cliente"/>
+                                <label for="txtNombreC">Nombre:</label>
+                            </div>                        
+                        </div>
+                        <div class="col-12 col-md-3 mb-1 mb-md-0">                            
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #04272E; border-radius: 5px;">
+                                <input id="txtApellidoPaternoC" type="text" class="form-control" placeholder="Apellido Paterno del Cliente"/>
+                                <label for="txtApellidoPaternoC">Apellido Paterno:</label>
+                            </div>                        
+                        </div>
+                        <div class="col-12 col-md-3 mb-1 mb-md-0">                            
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #04272E; border-radius: 5px;">
+                                <input id="txtApellidoMaternoC" type="text" class="form-control" placeholder="Apellido Materno del Cliente"/>
+                                <label for="txtApellidoMaternoC">Apellido Materno:</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3 mb-1 mb-md-0">
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #04272E; border-radius: 5px;">
+                                <input id="txtGeneroC" type="text" class="form-control" placeholder="Genero Cliente"/>
+                                <label for="txtGeneroC">G&eacute;nero:</label>
+                            </div>
+                        </div>                         
+                    </div> 
+                    <div class="row" style="padding-top: 8px; padding-bottom: 16px;"> 
+                        <div class="col-12 col-md-3 mb-1 mb-md-0">                            
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #04272E; border-radius: 5px;">
+                                <input id="txtTelefonoCasaC" type="text" class="form-control" placeholder="Telefono de Casa"/>
+                                <label for="txtTelefonoCasaC">Tel&eacute;fono de Casa:</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3 mb-1 mb-md-0">
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #04272E; border-radius: 5px;">
+                                <input id="txtTelefonoMovilC" type="text" class="form-control" placeholder="Telefono Movil"/>
+                                <label for="txtTelefonoMovilC">Tel&eacute;fono M&oacute;vil:</label>
+                            </div>
+                        </div> 
+                        <div class="col-12 col-md-3 mb-1 mb-md-0">                            
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #04272E; border-radius: 5px;">
+                                <input id="txtCorreoElectronicoC" type="email" class="form-control" placeholder="Correo Electronico"/>
+                                <label for="txtCorreoElectronicoC">Correo Electronico:</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3 mb-1 mb-md-0">                            
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #04272E; border-radius: 5px;">
+                                <input id="txtRFCC" type="text" class="form-control" placeholder="Telefono de Casa"/>
+                                <label for="txtRFCC">RFC:</label>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="row justify-content-md-center">
+                        <div class=" col-12 col-md-4 my-3 text-center">
+                            <div class="row">
+                                <div class="col-4">
+                                    <button class="btn btn-primary" onclick="cm.save();"><i class="fas fa-save"></i>&nbsp;&nbsp;Guardar</button>
+                                </div>
+                                <div class="col-4">
+                                    <button class="btn btn-danger" onclick="cm.remove();"><i class="fas fa-trash"></i>&nbsp;Eliminar</button>
+                                </div>
+                                <div class="col-4">
+                                    <button class="btn btn-success" onclick="cm.limpiar_y_mostrarDetalle();"><i class="fas fa-file"></i>&nbsp;&nbsp;Nuevo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="divCatalogo" class="col-12">
+        <div class="card">
+            <div class="card-header card-hform">
+                Listado de Clientes
+            </div>
+            <div class="card-body">
+                <table id="tblClientes" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Tel&eacute;fono Casa</th>
+                            <th>Tel&eacute;fono M&oacute;vil</th>
+                            <th> </th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyClientes"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

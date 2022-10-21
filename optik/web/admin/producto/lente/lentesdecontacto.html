@@ -1,0 +1,162 @@
+<div class="row">
+    <div class="col">
+        <div class="card-header modulo-title text-light bg-gradient">
+            <span>
+                <img alt="" style="height: 24px;" src="../img/svg/package.svg"/>
+                <span class="h5">M&oacute;dulo de Gesti&oacute;n Lentes de Contacto</span>
+                <span style="margin-left: 16px;">
+                    <button class="btn btn-sm btn-outline-light my-2" 
+                            onclick="cm.setDetalleVisible(true);">
+                        <i class="fas fa-plus"></i>&nbsp;&nbsp;Agregar Nuevo
+                    </button>
+                </span>
+            </span>
+            <span class="float-end"><a class="text-light" href="#" onclick="cerrarModulo();">
+                    <i class="fas fa-times"></i>
+                </a>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="row mt-2">
+    <div id="divDetalle" class="col-12">
+        <div class="card">
+            <div class="card-header card-hform">
+                Detalles del Lente de Contacto
+                <span class="float-end">
+                    <a href="#" 
+                       onclick="cm.setDetalleVisible(false);">
+                        <i class="fas fa-times"></i>
+                    </a>
+                </span>
+            </div>
+            <div class="card-body">
+                <div class="form">
+                    <div class="row" style="padding-top: 8px; padding-bottom: 16px;">
+                        <div class="col-12 col-md-6 mb-1 mb-md-0">                            
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #34383c; border-radius: 5px;">
+                                <input id="txtIdLenteC" type="text" class="form-control" readonly/>
+                                <label for="txtIdLenteC">C&oacute;digo de Lente: </label>
+                            </div>
+                        </div> 
+                        <div class="col-12 col-md-6 mb-1 mb-md-0">                            
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #34383c; border-radius: 5px;">
+                                <input id="txtCodigoProducto" type="text" class="form-control" readonly/>
+                                <label for="txtCodigoProducto">C&oacute;digo de Producto: </label>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="row" style="padding-top: 8px; padding-bottom: 16px;">
+                        <div class="col-12 col-md-3 mb-1 mb-md-0">                            
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #04272E; border-radius: 5px;">                                
+                                <select id="selTipoL" name="select" class="form-select" aria-label="Default select example">
+                                    <option value="value1">Est&eacute;tico</option>
+                                    <option value="value2">Correctivos</option>
+                                    <option value="value3" selected="">Tipo de lente</option>                                    
+                                </select>                                
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3 mb-1 mb-md-0">                            
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #04272E; border-radius: 5px;">
+                                <input id="txtNombre" type="text" class="form-control" placeholder="Nombre del Acesorio"/>
+                                <label for="txtNombre">Nombre:</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3 mb-1 mb-md-0">
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #04272E; border-radius: 5px;">
+                                <input id="txtMarca" type="text" class="form-control" placeholder="Marca del Accesorio"/>
+                                <label for="txtMarca">Marca:</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3 mb-1 mb-md-0">
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #04272E; border-radius: 5px;">
+                                <input id="txtModelo" type="text" class="form-control" placeholder="Modelo">
+                                <label for="txtModelo">Modelo:</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-1" style="padding-top: 3px;">
+                        <div class="col-12 col-md-3 mb-1 mb-md-0">
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #04272E; border-radius: 5px;">
+                                <input id="txtcolorLenteContacto" type="color" class="form-control" placeholder="Color Lente Contacto">
+                                <label for="txtcolorLenteContacto">Color:</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3 mb-1 mb-md-0">
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #04272E; border-radius: 5px;">
+                                <input id="txtQueratometria" type="text" class="form-control" placeholder="Queratometria">
+                                <label for="txtQueratometria">Queratometria:</label>
+                            </div>
+                        </div> 
+                        <div class="col-12 col-md-3 mb-1 mb-md-0">
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #04272E; border-radius: 5px;">
+                                <input id="txtPrecioCompraL" type="text" class="form-control" placeholder="">
+                                <label for="txtPrecioCompraL">Precio de compra:</label>
+                            </div>
+                        </div> 
+                        <div class="col-12 col-md-3 mb-1 mb-md-0">
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #04272E; border-radius: 5px;">
+                                <input id="txtPrecioVentaL" type="text" class="form-control" placeholder="">
+                                <label for="txtPrecioVentaL">Precio de venta:</label>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="row mt-2" style="padding-top: 3px;">  
+                        <div class="col-12 col-md-6 mb-1 mb-md-0">
+                            <div class="form-floating bg-gradient
+                                 " style="padding-left: 6px; background-color: #04272E; border-radius: 5px;">                                    
+                                <input class="form-control" type="text" id="txtExistenciasL" >
+                                <label for="txtExistenciasL">Existencia:</label>
+                            </div>                                
+                        </div>
+                        <div class="col-12 col-md-6 mb-1 mb-md-0">
+                            <div class="form-floating bg-gradient
+                                 " style="padding-left: 6px; background-color: #04272E; border-radius: 5px;">                                    
+                                <input class="form-control" type="file" id="imgLente" placeholder="Imagen:" style="margin-bottom: 3px;">
+                                <label for="imgLente">Imagen:</label>
+                            </div>                                
+                        </div>
+                    </div>                  
+                    <div class="row justify-content-md-center">
+                        <div class=" col-12 col-md-4 my-3 text-center">
+                            <div class="row">
+                                <div class="col-4">
+                                    <button class="btn btn-primary" onclick="cm.save();"><i class="fas fa-save"></i>&nbsp;&nbsp;Guardar</button>
+                                </div>
+                                <div class="col-4">
+                                    <button class="btn btn-danger" onclick="cm.remove();"><i class="fas fa-trash"></i>&nbsp;Eliminar</button>
+                                </div>
+                                <div class="col-4">
+                                    <button class="btn btn-success" onclick="cm.limpiarFormularioDetalle(); cm.limpiar_y_mostrarDetalle();"><i class="fas fa-file"></i>&nbsp;&nbsp;Nuevo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="divCatalogo" class="col-12">
+        <div class="card">
+            <div class="card-header card-hform">
+                Listado de Lentes De Contacto
+            </div>
+            <div class="card-body">
+                <table id="tblEmpleados" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Marca</th>
+                            <th>Modelo</th>
+                            <th>Precio Compra</th>
+                            <th>Precio Venta</th>                            
+                            <th>Existencias</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyLentesC"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>    
+</div>

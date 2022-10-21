@@ -1,0 +1,133 @@
+<div class="row">
+    <div class="col">
+        <div class="card-header modulo-title text-light bg-gradient" >
+            <span>
+                <img alt="" style="height: 24px;" src="../img/svg/package.svg"/>
+                <span class="h5">M&oacute;dulo de Gesti&oacute;n de Accesorios</span>
+                <span style="margin-left: 16px;">
+                    <button class="btn btn-sm btn-outline-light my-2" 
+                            onclick="cm.setDetalleVisible(true);">
+                        <i class="fas fa-plus"></i>&nbsp;&nbsp;Agregar Nuevo
+                    </button>
+                </span>
+            </span>
+            <span class="float-end">
+                <a class="text-light" href="#" onclick="cerrarModulo();">
+                    <i class="fas fa-times"></i>
+                </a>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="row mt-2">
+    <div id="divDetalle" class="col-12">
+        <div class="card">
+            <div class="card-header card-hform">
+                Detalles del Accesorio
+                <span class="float-end text-light">
+                    <a href="#" 
+                       onclick="cm.setDetalleVisible(false);">
+                        <i class="fas fa-times "></i>
+                    </a>
+                </span>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col">                                    
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 mb-1 mb-md-0">                            
+                                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #34383c; border-radius: 5px;">
+                                                <input id="txtCodigoAccesorio" type="text" class="form-control" readonly/>
+                                                <label for="txtCodigoAccesorio"> C&oacute;digo de accesorio</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 mb-1 mb-md-0">                            
+                                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #34383c; border-radius: 5px;">
+                                                <input id="txtCodigoProducto" type="text" class="form-control" readonly/>
+                                                <label for="txtCodigoProducto">C&oacute;digo de producto </label>
+                                            </div>
+                                        </div>                                        
+                                    </div>  
+                                </div>
+                            </div>                            
+                        </div>                       
+                    </div>
+                    <div class="row" style="padding-top: 8px; padding-bottom: 16px;">
+                        <div class="col-12 col-md-6 mb-1 mb-md-0">                            
+                            <div class="form-floating bg-gradient" style="padding-left:6px; background-color:#04272E; border-radius:5px;">
+                                <input id="txtNombre" type="text" class="form-control" placeholder="Nombre del Acesorio"/>
+                                <label for="txtNombre">Nombre:</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 mb-1 mb-md-0">
+                            <div class="form-floating bg-gradient" style="padding-left:6px; background-color:#04272E; border-radius:5px;">
+                                <input id="txtMarca" type="text" class="form-control" placeholder="Marca del Accesorio"/>
+                                <label for="txtMarca">Marca:</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 8px; padding-bottom: 16px;">
+                        <div class="col-12 col-md-4 mb-1 mb-md-0">
+                            <div class="form-floating bg-gradient" style="padding-left:6px; background-color:#04272E; border-radius:5px;">
+                                <input id="txtPrecioCompra" type="text" class="form-control" placeholder="Precio de Compra del Accesorio"/>
+                                <label for="txtPrecioCompra" >Precio de Compra:</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 mb-1 mb-md-0">
+                            <div class="form-floating bg-gradient" style="padding-left:6px; background-color:#04272E; border-radius:5px;">
+                                <input id="txtPrecioVenta" type="text" class="form-control" placeholder="Precio de Venta del Accesorio"/>
+                                <label for="txtPrecioVenta" >Precio de Venta:</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 mb-1 mb-md-0">
+                            <div class="form-floating bg-gradient" style="padding-left:6px; background-color:#04272E; border-radius:5px;">
+                                <input id="txtExistencias" type="text" class="form-control" placeholder="Accesorios en Stock"/>
+                                <label for="txtExistencias">Existencias:</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-md-center">
+                        <div class=" col-12 col-md-4 my-3 text-center">
+                            <div class="row">
+                                <div class="col-4">
+                                    <button class="btn btn-primary" onclick="cm.save();"><i class="fas fa-save"></i>&nbsp;&nbsp;Guardar</button>
+                                </div>
+                                <div class="col-4">
+                                    <button class="btn btn-danger" onclick="cm.remove();"><i class="fas fa-trash"></i>&nbsp;Eliminar</button>
+                                </div>
+                                <div class="col-4">
+                                    <button class="btn btn-success" onclick="cm.limpiarFormularioDetalle(); cm.limpiar_y_mostrarDetalle();"><i class="fas fa-file"></i>&nbsp;&nbsp;Nuevo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="divCatalogo" class="col-12">
+        <div class="card">
+            <div class="card-header card-hform">
+                Listado de Accesorios
+            </div>
+            <div class="card-body">
+                <table id="tblAccesorios" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Marca</th>
+                            <th>Precio Compra</th>
+                            <th>Precio Venta</th>
+                            <th>Existencias</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyAccesorios"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

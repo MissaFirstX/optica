@@ -1,0 +1,157 @@
+<div class="row">
+    <div class="col">
+        <div class="card-header modulo-title text-light bg-gradient">
+            <span>
+                <img alt="" style="height: 24px;" src="../img/svg/package.svg"/>
+                <span class="h5">M&oacute;dulo de Gesti&oacute;n Armaz&oacute;n</span>
+                <span style="margin-left: 16px;">
+                    <button class="btn btn-sm btn-outline-light my-2" 
+                            onclick="cm.setDetalleVisible(true);">
+                        <i class="fas fa-plus"></i>&nbsp;&nbsp;Agregar Nuevo
+                    </button>
+                </span>
+            </span>
+            <span class="float-end"><a class="text-light" href="#" onclick="cerrarModulo();">
+                    <i class="fas fa-times"></i>
+                </a>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="row mt-2">
+    <div id="divDetalle" class="col-12">
+        <div class="card">
+            <div class="card-header card-hform">
+                Detalles de Armaz&oacute;n
+                <span class="float-end">
+                    <a href="#" 
+                       onclick="cm.setDetalleVisible(false);">
+                        <i class="fas fa-times"></i>
+                    </a>
+                </span>
+            </div>
+            <div class="card-body">
+                <div class="form">
+                    <div class="row mt-1" style="padding-top: 3px">
+                        <div class="col-12 col-md-4 mb-1 mb-md-0">                            
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #34383c; border-radius: 5px;">
+                                <input id="txtCodigoBarrasAr" type="text" class="form-control" readonly/>
+                                <label for="txtCodigoBarrasAr">C&oacute;digo de Barras:</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 mb-1 mb-md-0">                            
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #34383c; border-radius: 5px;">
+                                <input id="txtCodigoArmazon" type="text" class="form-control" readonly/>
+                                <label for="txtCodigoArmazon">C&oacute;digo de Armaz&oacute;n </label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 mb-1 mb-md-0">                            
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #34383c; border-radius: 5px;">
+                                <input id="txtCodigoProducto" type="text" class="form-control" readonly/>
+                                <label for="txtCodigoProducto">C&oacute;digo de Producto </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-1" style="padding-top: 3px;">
+                        <div class="col-12 col-md-4 mb-1 mb-md-0">                            
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #04272E; border-radius: 5px;">
+                                <input id="txtNombreAr" type="text" class="form-control" placeholder="Nombre del Acesorio"/>
+                                <label for="txtNombreAr">Nombre:</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 mb-1 mb-md-0">
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #04272E; border-radius: 5px;">
+                                <input id="txtMarcaAr" type="text" class="form-control" placeholder="Marca del Accesorio"/>
+                                <label for="txtMarcaAr">Marca:</label>
+                            </div>
+
+                        </div>
+                        <div class="col-12 col-md-4 mb-1 mb-md-0">
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #04272E; border-radius: 5px;">
+                                <input id="txtModeloAr" type="text" class="form-control" placeholder="Modelo">
+                                <label for="txtModeloAr">Modelo:</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 8px; padding-bottom: 16px;">
+                        <div class="col-12 col-md-4 mb-1 mb-md-0">
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #04272E; border-radius: 5px;">
+                                <input id="txtPrecioCompraAr" type="text" class="form-control" placeholder="Precio de Compra del Accesorio"/>
+                                <label for="txtPrecioCompraAr" >Precio de Compra:</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 mb-1 mb-md-0">
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #04272E; border-radius: 5px;">
+                                <input id="txtPrecioVentaAr" type="text" class="form-control" placeholder="Precio de Venta del Accesorio"/>
+                                <label for="txtPrecioVentaAr" >Precio de Venta:</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 mb-1 mb-md-0">
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #04272E; border-radius: 5px;">
+                                <input id="txtExistenciasAr" type="text" class="form-control" placeholder="Accesorios en Stock"/>
+                                <label for="txtExistenciasAr">Existencias:</label>
+                            </div>
+                        </div>                        
+                    </div>                    
+                    <div class="row mt-1" style="padding-top: 3px;">
+                        <div class="col-12 col-md-4 mb-1 mb-md-0">
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #04272E; border-radius: 5px;">
+                                <input id="txtDimensionesAr" type="text" class="form-control" placeholder="Dimensiones">
+                                <label for="txtDimensionesAr">Dimensiones:</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 mb-1 mb-md-0">
+                            <div class="form-floating bg-gradient" style="padding-left: 6px; background-color: #04272E; border-radius: 5px;">
+                                <input id="colorAr" type="color" class="form-control" placeholder="Color">
+                                <label for="colorAr">Color:</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 mb-1 mb-md-0">
+                            <div class="form-floating bg-gradient
+                                 " style="padding-left: 6px; background-color: #04272E; border-radius: 5px;">
+                                <textarea id="txtDescripcionAr" class="form-control" placeholder="Descripci&oacute;n:"></textarea>
+                                <label for="txtDescripcionAr">Descripci&oacute;n</label>
+                            </div>
+                        </div>
+                        <div class="row mt-2" style="padding-top: 3px;">
+                            <div class="col-12 col-md-12 mb-1 mb-md-0">
+                                <div class="form-floating bg-gradient
+                                     " style="padding-left: 6px; background-color: #04272E; border-radius: 5px;">                                    
+                                    <input class="form-control" type="file" id="imgAcc" placeholder="Imagen:" style="margin-bottom: 3px;">
+                                    <label for="imgAcc">Imagen:</label>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-3 text-center">
+                        <button class="btn btn-primary" onclick="cm.save();"><i class="fas fa-save"></i>&nbsp;&nbsp;Guardar</button>
+                        <button class="btn btn-danger mx-3" onclick="cm.remove();"><i class="fas fa-trash"></i>&nbsp;Eliminar</button>
+                        <button class="btn btn-success" onclick="cm.limpiarFormularioDetalle(); cm.limpiar_y_mostrarDetalle();"><i class="fas fa-file"></i>&nbsp;&nbsp;Nuevo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="divCatalogo" class="col-12">
+        <div class="card">
+            <div class="card-header card-hform">
+                Listado de Armazon
+            </div>
+            <div class="card-body">
+                <table id="tblArmazon" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Marca</th>
+                            <th>Precio Compra</th>
+                            <th>Precio Venta</th>
+                            <th>Existencias</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyArmazon"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>    
+</div>

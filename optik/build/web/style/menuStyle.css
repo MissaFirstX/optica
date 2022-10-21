@@ -1,0 +1,116 @@
+body {
+    font-family: myFont;
+    font-size: 14px;
+}
+
+.fondoMenu {
+    background-color: #04272E;
+}
+
+.navM {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(1, 35, 42, 0.754);
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.optica_menu_item,
+.optica_menu_item:link,
+.optica_menu_item:visited,
+.optica_menu_item:active {
+    color: #c1dee6;
+}
+
+.optica_menu_item:hover {
+    color: white;
+    background-color: rgba(193, 222, 230, 0.350);
+    border-radius: 10px;
+}
+
+.producto_item_menu {
+    background-color: rgba(193, 222, 230, 0.9);
+}
+
+.producto_item,
+.producto_item:link,
+.producto_item:visited,
+.producto_item:active {
+    color: #c1dee6;
+}
+
+.producto_item:hover {
+    background-color: rgba(193, 222, 230, 0.350);
+    border-radius: 10px;
+    color: white;
+}
+
+.hamburguesa-btn {
+    color: #3a7985;
+    background-color: rgba(4, 39, 46, 0.5);
+    border: none;
+    font-size: 30px;
+    width: 50px;
+    height: content-box;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 2px;
+}
+
+.hamburguesa-btn:visited,
+.hamburguesa-btn:active {
+    color: #3a7985;
+    background-color: rgba(4, 39, 46, 0.5);
+    border: none;
+    font-size: 30px;
+    width: 50px;
+    height: content-box;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 2px;
+    border: none;
+}
+
+.card-hform {
+    color: white;
+    background-color: #04272E;
+}
+
+.modulo-title {
+    background-color: #04272E;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 5px;
+}
+
+#contenedor_principal {
+    z-index: 1;
+}
+
+
+/********************************************************************/
+@font-face {
+    font-family: myfont;
+    src: url("fuentes/Righteous/Righteous-Regular.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: head;
+    src: url("fuentes/NASAL.TTF");
+}
+
+/********************************************************************/
+@media(max-width: 991px) {
+    #menuPrincipal {
+        background-color: #055160;
+        z-index: 2;
+    }
+}
+
+@media(max-width:480px) {}
